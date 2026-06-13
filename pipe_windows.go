@@ -1,5 +1,3 @@
-//go:build windows
-
 package main
 
 import (
@@ -9,35 +7,31 @@ import (
 	"time"
 )
 
-// dialPipe opens a Windows named pipe as a net.Conn using raw syscalls.
-// This is how we talk to Discord on Windows without any external libraries.
 func dialPipe(path string) (net.Conn, error) {
-	// Convert path to UTF-16 for Windows API
 	pathPtr, err := syscall.UTF16PtrFromString(path)
 	if err != nil {
 		return nil, err
 	}
 
-	// Open the named pipe
 	handle, err := syscall.CreateFile(
 		pathPtr,
 		syscall.GENERIC_READ|syscall.GENERIC_WRITE,
-		0,    // no sharing
-		nil,  // default security
+		0, 
+		nil,
 		syscall.OPEN_EXISTING,
 		syscall.FILE_ATTRIBUTE_NORMAL,
-		0,    // no template
+		0,  
 	)
 	if err != nil {
 		return nil, err
 	}
 
-	// Wrap the handle as an os.File so we can use it as net.Conn
+
 	file := os.NewFile(uintptr(handle), path)
 	return &pipeConn{file: file}, nil
 }
 
-// pipeConn wraps an os.File to satisfy the net.Conn interface
+
 type pipeConn struct {
 	file *os.File
 }
