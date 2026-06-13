@@ -78,8 +78,8 @@ User=""
 Requirements: [Go 1.21+](https://go.dev/dl/)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
-cd YOUR_REPO_NAME
+git clone [https://github.com/giannis211/ProtankiLauncher-with-Discord-RPC-Status/]
+cd ProtankiLauncher-with-Discord-RPC-Status
 go build -ldflags="-H windowsgui" -o ProTankiLauncher.exe .
 ```
 
