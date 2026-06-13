@@ -15,11 +15,9 @@ import (
 	"time"
 )
 
-// ────────────────────────────────────────────────────────────
 const CLIENT_ID = "1515462594272559145"
 const GAME_EXE = "ProTanki.exe"
 
-// ────────────────────────────────────────────────────────────
 
 const (
 	opHandshake = 0
@@ -38,7 +36,7 @@ func readUsername(dir string) string {
 		line = strings.TrimSpace(line)
 		if strings.HasPrefix(line, "User=") {
 			name := strings.TrimPrefix(line, "User=")
-			name = strings.Trim(name, `"' `) // strip quotes and spaces
+			name = strings.Trim(name, `"' `) 
 			return name
 		}
 	}
