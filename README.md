@@ -8,11 +8,11 @@ A lightweight launcher for **ProTanki Online** that automatically displays **Dis
 
 **Without username:**
 
-![RPC without username](ProtankiNoname.png)
+![RPC without username](WithoutName.png)
 
 **With username set in User.txt:**
 
-![RPC with username](images/rpc-with-name.png)
+![RPC with username](WithName.png)
 
 ---
 
