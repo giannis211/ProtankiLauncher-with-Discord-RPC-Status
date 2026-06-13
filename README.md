@@ -30,7 +30,7 @@ A lightweight launcher for **ProTanki Online** that automatically displays **Dis
 
 ##  Installation
 
-1. Download the latest release from the [Releases]([../../releases](https://github.com/giannis211/ProtankiLauncher-with-Discord-RPC-Status/releases/tag/v1)) page
+1. Download the latest release from the [Releases](https://github.com/giannis211/ProtankiLauncher-with-Discord-RPC-Status/releases/tag/v1)) page
 
 ```
 ProTanki Online/
