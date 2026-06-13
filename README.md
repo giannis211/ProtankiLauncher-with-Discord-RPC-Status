@@ -1,6 +1,6 @@
 #  ProTanki Online Launcher
 
-A lightweight launcher for **ProTanki Online** that automatically displays **Discord Rich Presence** when the game is running — no extra software, no setup beyond dropping two files in your game folder.
+A lightweight launcher for **ProTanki Online** that launches Protanki.exe and automatically displays **Discord Rich Presence** when the game is running — no extra software, no setup beyond dropping two files in your game folder.
 
 ---
 
