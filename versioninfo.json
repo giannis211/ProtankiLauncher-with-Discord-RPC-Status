@@ -1,0 +1,20 @@
+{
+    "FixedFileInfo": {
+        "FileVersion":    {"Major": 1, "Minor": 0, "Patch": 0, "Build": 0},
+        "ProductVersion": {"Major": 1, "Minor": 0, "Patch": 0, "Build": 0}
+    },
+    "StringFileInfo": {
+        "CompanyName":      "Protanki Online",
+        "FileDescription":  "Protanki Online Launcher",
+        "InternalName":     "ProTankiLauncher",
+        "LegalCopyright":   "Protanki Online",
+        "OriginalFilename": "ProTankiLauncher.exe",
+        "ProductName":      "Protanki Online",
+        "ProductVersion":   "1.0.0.0"
+    },
+    "VarFileInfo": {
+        "Translation": {"LangID": 1033, "CharsetID": 1200}
+    },
+    "IconPath": "app.ico",
+    "ManifestPath": ""
+}
