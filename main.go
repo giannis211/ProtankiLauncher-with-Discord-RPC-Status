@@ -29,9 +29,6 @@ const (
 
 type rpcConn struct{ conn net.Conn }
 
-// readUsername looks for User.txt in the same folder as the launcher.
-// Expected format inside the file: User=Danakiskarpax
-// Returns empty string if file missing, empty, or malformed.
 func readUsername(dir string) string {
 	data, err := os.ReadFile(filepath.Join(dir, "User.txt"))
 	if err != nil {
@@ -101,7 +98,6 @@ func (r *rpcConn) setActivity(startTime time.Time, username string) error {
 		},
 	}
 
-	// Only add state if the player set a username in User.txt
 	if username != "" {
 		activity["state"] = username
 	}
@@ -124,10 +120,8 @@ func main() {
 	}
 	dir := filepath.Dir(exePath)
 
-	// Read optional username from User.txt
 	username := readUsername(dir)
 
-	// Launch the game
 	gamePath := filepath.Join(dir, GAME_EXE)
 	gameCmd := exec.Command(gamePath)
 	gameCmd.Dir = dir
@@ -137,7 +131,6 @@ func main() {
 
 	startTime := time.Now()
 
-	// Connect to Discord
 	var rpc *rpcConn
 	for attempt := 1; attempt <= 12; attempt++ {
 		c, err := connectToDiscord()
